@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import bookRoute from "./Route/book.route.js";
+import userRoute from './Route/user.route.js'
+
 import cors from "cors";
 
 dotenv.config();        // 1️⃣ Load environment variables
@@ -18,7 +20,9 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+//defining routes
 app.use("/book", bookRoute);
+app.use("/user",userRoute); 
 
 // 6️⃣ Start Server
 const PORT = process.env.PORT || 5000;
