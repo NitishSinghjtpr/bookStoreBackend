@@ -1,0 +1,59 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Fix slick slider not visible */
+.slick-slider,
+.slick-list,
+.slick-track {
+  display: block !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important;
+}
+
+.slick-slide > div {
+  display: block !important;
+  height: auto !important;
+}
+
+/* Dots styling */
+.slick-dots li button:before {
+  color: #999 !important;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ec4899 !important; /* Tailwind pink-500 */
+}
+
+/* Slider spacing */
+.slick-list {
+  margin: 0 -10px !important;
+}
+
+.slick-slide > div {
+  padding: 0 10px !important;
+}
+
+/* LIGHT MODE BG FIX */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+}
+
+.dark {
+  --bg-color: #111827;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
